@@ -144,7 +144,7 @@
 		071909DA243C9FF8001C431F /* DDLog+LOGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
 		071909DB243C9FF8001C431F /* CLIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIColor.h; sourceTree = "<group>"; };
 		071909DC243C9FF8001C431F /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		071909FD243CA0AC001C431F /* SwiftLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftLogLevel.h; path = Sources/CocoaLumberjackSwiftSupport/include/CocoaLumberjackSwiftSupport/SwiftLogLevel.h; sourceTree = SOURCE_ROOT; };
+		071909FD243CA0AC001C431F /* SwiftLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftLogLevel.h; path = Sources/CocoaLumberjackSwift/include/SwiftLogLevel.h; sourceTree = SOURCE_ROOT; };
 		074EA6172B4D3027008B2417 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		0752523D22E07638005D30B3 /* DDLegacyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLegacyMacros.h; sourceTree = "<group>"; };
 		0A26B54B22DE346B004EE6A7 /* CLIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIColor.m; sourceTree = "<group>"; };
@@ -205,30 +205,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		071909CC243C9FF8001C431F /* CocoaLumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				071909DB243C9FF8001C431F /* CLIColor.h */,
-				071909CF243C9FF8001C431F /* DDAbstractDatabaseLogger.h */,
-				071909D2243C9FF8001C431F /* DDASLLogCapture.h */,
-				071909DC243C9FF8001C431F /* DDASLLogger.h */,
-				071909D6243C9FF8001C431F /* DDAssertMacros.h */,
-				071909D4243C9FF8001C431F /* DDContextFilterLogFormatter.h */,
-				C76CFC752619ECF100949045 /* DDContextFilterLogFormatter+Deprecated.h */,
-				071909D8243C9FF8001C431F /* DDDispatchQueueLogFormatter.h */,
-				071909D3243C9FF8001C431F /* DDFileLogger.h */,
-				071909D7243C9FF8001C431F /* DDFileLogger+Buffering.h */,
-				071909CD243C9FF8001C431F /* DDLog.h */,
-				071909DA243C9FF8001C431F /* DDLog+LOGV.h */,
-				071909D0243C9FF8001C431F /* DDLoggerNames.h */,
-				071909D1243C9FF8001C431F /* DDLogMacros.h */,
-				071909CE243C9FF8001C431F /* DDMultiFormatter.h */,
-				071909D9243C9FF8001C431F /* DDOSLogger.h */,
-				071909D5243C9FF8001C431F /* DDTTYLogger.h */,
-			);
-			path = CocoaLumberjack;
-			sourceTree = "<group>";
-		};
 		0A26B53222DE346B004EE6A7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +238,25 @@
 		0A26B53622DE346B004EE6A7 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				071909CC243C9FF8001C431F /* CocoaLumberjack */,
+				0A26B55422DE346B004EE6A7 /* CocoaLumberjack.h */,
+				071909DB243C9FF8001C431F /* CLIColor.h */,
+				071909CF243C9FF8001C431F /* DDAbstractDatabaseLogger.h */,
+				071909D2243C9FF8001C431F /* DDASLLogCapture.h */,
+				071909DC243C9FF8001C431F /* DDASLLogger.h */,
+				071909D6243C9FF8001C431F /* DDAssertMacros.h */,
+				071909D4243C9FF8001C431F /* DDContextFilterLogFormatter.h */,
+				C76CFC752619ECF100949045 /* DDContextFilterLogFormatter+Deprecated.h */,
+				071909D8243C9FF8001C431F /* DDDispatchQueueLogFormatter.h */,
+				071909D3243C9FF8001C431F /* DDFileLogger.h */,
+				071909D7243C9FF8001C431F /* DDFileLogger+Buffering.h */,
+				071909CD243C9FF8001C431F /* DDLog.h */,
+				071909DA243C9FF8001C431F /* DDLog+LOGV.h */,
+				071909D0243C9FF8001C431F /* DDLoggerNames.h */,
+				071909D1243C9FF8001C431F /* DDLogMacros.h */,
+				071909CE243C9FF8001C431F /* DDMultiFormatter.h */,
+				071909D9243C9FF8001C431F /* DDOSLogger.h */,
+				071909D5243C9FF8001C431F /* DDTTYLogger.h */,
+				0752523D22E07638005D30B3 /* DDLegacyMacros.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -291,8 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				0A26B55322DE346B004EE6A7 /* CocoaLumberjack-Info.plist */,
-				0A26B55422DE346B004EE6A7 /* CocoaLumberjack.h */,
-				0752523D22E07638005D30B3 /* DDLegacyMacros.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -300,6 +292,7 @@
 		0A26B55922DE346B004EE6A7 /* CocoaLumberjackSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BFA3973A2B7A98D00045F4C4 /* include */,
 				0A26B55E22DE346B004EE6A7 /* Supporting Files */,
 				0A26B55D22DE346B004EE6A7 /* CocoaLumberjack.swift */,
 				0A26B55A22DE346B004EE6A7 /* DDAssert.swift */,
@@ -312,8 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				0A26B55F22DE346B004EE6A7 /* CocoaLumberjackSwift-Info.plist */,
-				0A26B56022DE346B004EE6A7 /* CocoaLumberjackSwift.h */,
-				071909FD243CA0AC001C431F /* SwiftLogLevel.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -326,6 +317,15 @@
 				435F03AC2174A39200A86B2D /* Module-Shared.xcconfig */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		BFA3973A2B7A98D00045F4C4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0A26B56022DE346B004EE6A7 /* CocoaLumberjackSwift.h */,
+				071909FD243CA0AC001C431F /* SwiftLogLevel.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		DCB3184514EB418D001CFBEE = {
